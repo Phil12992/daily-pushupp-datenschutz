@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz – Daily Pushupp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --bg-secondary: #111111;
+            --accent: #ff6b35;
+            --accent-hover: #ff8555;
+            --text: #f5f5f5;
+            --text-muted: #888888;
+            --border: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: var(--text);
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #cccccc;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            color: #cccccc;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Daily Pushupp <span>💪</span></div>
+            <p class="tagline">Datenschutzerklärung</p>
+            <h1>Ihre Daten gehören Ihnen</h1>
+            <p class="updated">Stand: 23. Februar 2026</p>
+        </header>
+
+        <section>
+            <h2>🤔 Was ist Daily Pushupp?</h2>
+            <p>Daily Pushupp ist eine einfache App, um Dein tägliches Push-Up-Training zu tracken. Jeden Tag erhöht sich das Ziel um eine Wiederholung – so baust Du langfristig Kraft auf.</p>
+            <p>Die App läuft komplett in Deinem Browser. Es gibt keinen Server, keine Cloud, keine Registrierungspflicht.</p>
+        </section>
+
+        <section>
+            <h2>📱 Welche Daten werden erfasst?</h2>
+            <p><strong>Gar keine.</strong> Ernsthaft. Daily Pushupp speichert alle Daten lokal auf Deinem Gerät:</p>
+            <ul>
+                <li>Dein Benutzername (lokal im Browser)</li>
+                <li>Dein Passwort (lokal verschlüsselt)</li>
+                <li>De Trainingsstatistiken (Streak, Tage, Wiederholungen)</li>
+                <li>Deine Fotos (falls Du welche hochlädst – bleiben nur auf Deinem Gerät)</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Keine Cookies.</strong> Keine Tracking-Pixel. Keine Analytics. Keine Drittanbieter-Dienste.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>☁️ Werden Daten in die Cloud geladen?</h2>
+            <p><strong>Nein.</strong> Alle Daten bleiben in Deinem Browser (localStorage). Die App funktioniert sogar offline.</p>
+            <p>Wenn Du die App auf einem anderen Gerät nutzen möchtest, gibt es keinen einfachen Weg – weil wir eben <em>keine</em> Daten von Dir in der Cloud speichern.</p>
+        </section>
+
+        <section>
+            <h2>📸 Was ist mit Fotos?</h2>
+            <p>Wenn Du Fortschrittsfotos hochlädst, werden diese:</p>
+            <ul>
+                <li>Nur in Deinem lokalen Browser gespeichert</li>
+                <li>Nur von Dir gesehen und gelöscht</li>
+                <li><strong>Niemals</strong> an einen Server übertragen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔒 Wie sicher sind meine Daten?</h2>
+            <p>Dein Passwort wird lokal gehasht (SHA-256). Die Daten auf Deinem Gerät sind so sicher wie Dein Gerät selbst.</p>
+            <p>Wir können Deine Daten nicht lesen, nicht exportieren, nicht löschen (außer Du löschst sie selbst im Browser).</p>
+        </section>
+
+        <section>
+            <h2>📩 Kontakt</h2>
+            <p>Fragen zum Datenschutz? Kein Problem.</p>
+            <p>Da wir kein Unternehmen führen und keine Server betreiben, gibt es kein offizielles Impressum – aber Du kannst uns erreiten, falls Du Fragen hast.</p>
+        </section>
+
+        <section>
+            <h2>📋 Zusammenfassung</h2>
+            <div class="highlight-box">
+                <p><span class="emoji">✅</span> Keine Server<br>
+                <span class="emoji">✅</span> Keine Cloud<br>
+                <span class="emoji">✅</span> Keine Registrierung<br>
+                <span class="emoji">✅</span> Keine Cookies<br>
+                <span class="emoji">✅</span> Kein Tracking<br>
+                <span class="emoji">✅</span> 100% lokal</p>
+            </div>
+            <p>Daily Pushupp ist Probably die datenschutzfreundlichste Fitness-App, die es gibt. ☺️</p>
+        </section>
+
+        <footer>
+            <p>Made with 🔥 for simple fitness tracking</p>
+            <p><a href="https://github.com/philbuerli/pushup-tracker">Zur App</a></p>
+        </footer>
+    </div>
+</body>
+</html>
