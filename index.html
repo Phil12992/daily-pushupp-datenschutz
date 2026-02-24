@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz – Daily Pushupp</title>
+    <title>Datenschutzerklärung – Daily Pushupp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #050505;
             --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
             --accent: #ff6b35;
             --accent-hover: #ff8555;
             --text: #f5f5f5;
             --text-muted: #888888;
-            --border: #222222;
+            --border: #2a2a2a;
         }
 
         * {
@@ -28,46 +29,36 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.7;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 720px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px;
         }
 
         header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
             border-bottom: 1px solid var(--border);
         }
 
         .logo {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        .logo span {
-            color: var(--text);
-        }
-
-        .tagline {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
+            font-size: 1.75rem;
+            margin-bottom: 12px;
             color: var(--text);
         }
 
-        .updated {
+        .meta {
             color: var(--text-muted);
             font-size: 0.9rem;
         }
@@ -77,25 +68,32 @@
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: var(--accent);
             margin-bottom: 16px;
-            margin-top: 32px;
+            margin-top: 36px;
         }
 
         h2:first-of-type {
             margin-top: 0;
         }
 
-        p {
-            margin-bottom: 16px;
-            color: #cccccc;
+        h3 {
+            font-size: 1.05rem;
+            color: var(--text);
+            margin-bottom: 12px;
+            margin-top: 24px;
         }
 
-        ul {
+        p {
+            margin-bottom: 16px;
+            color: #d0d0d0;
+        }
+
+        ul, ol {
             margin-bottom: 16px;
             padding-left: 24px;
-            color: #cccccc;
+            color: #d0d0d0;
         }
 
         li {
@@ -106,7 +104,7 @@
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 20px;
+            padding: 24px;
             margin: 24px 0;
         }
 
@@ -114,14 +112,62 @@
             margin-bottom: 0;
         }
 
-        .emoji {
-            font-size: 1.2em;
+        .warning-box {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            color: #d0d0d0;
+        }
+
+        .checklist-item .icon {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .toc {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .toc a {
+            color: var(--accent);
+            text-decoration: none;
+            display: block;
+            padding: 6px 0;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
         }
 
         footer {
-            text-align: center;
             margin-top: 60px;
-            padding-top: 40px;
+            padding-top: 32px;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
             font-size: 0.9rem;
@@ -136,17 +182,34 @@
             text-decoration: underline;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        td {
+            color: #d0d0d0;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 24px 16px;
             }
             
-            .logo {
-                font-size: 2rem;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
+            .checklist {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -154,75 +217,285 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">Daily Pushupp <span>💪</span></div>
-            <p class="tagline">Datenschutzerklärung</p>
-            <h1>Ihre Daten gehören Ihnen</h1>
-            <p class="updated">Stand: 23. Februar 2026</p>
+            <div class="logo">Daily Pushupp 💪</div>
+            <h1>Datenschutzerklärung</h1>
+            <p class="meta">Stand: 24. Februar 2026 | Version 1.0</p>
         </header>
 
-        <section>
-            <h2>🤔 Was ist Daily Pushupp?</h2>
-            <p>Daily Pushupp ist eine einfache App, um Dein tägliches Push-Up-Training zu tracken. Jeden Tag erhöht sich das Ziel um eine Wiederholung – so baust Du langfristig Kraft auf.</p>
-            <p>Die App läuft komplett in Deinem Browser. Es gibt keinen Server, keine Cloud, keine Registrierungspflicht.</p>
+        <div class="toc">
+            <h3>Inhaltsverzeichnis</h3>
+            <a href="#einleitung">1. Einleitung</a>
+            <a href="#verantwortlicher">2. Verantwortlicher</a>
+            <a href="#datenerfassung">3. Welche Daten werden erfasst?</a>
+            <a href="#zweck">4. Zweck der Datenverarbeitung</a>
+            <a href="#speicherung">5. Speicherung und Sicherheit</a>
+            <a href="#weiterleitung">6. Weitergabe an Dritte</a>
+            <a href="#cookies">7. Cookies und Tracking</a>
+            <a href="#rechte">8. Ihre Rechte</a>
+            <a href="#kinder">9. Kinder und Jugendliche</a>
+            <a href="#aenderung">10. Änderungen dieser Erklärung</a>
+            <a href="#kontakt">11. Kontakt</a>
+        </div>
+
+        <section id="einleitung">
+            <h2>1. Einleitung</h2>
+            <p>Mit dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung Ihrer personenbezogenen Daten bei der Nutzung der Mobile App "Daily Pushupp" (nachfolgend "App").</p>
+            <p>Daily Pushupp ist eine Fitness-App, die Benutzern hilft, ihre täglichen Push-Up-Trainings zu tracken. Die App folgt dem Prinzip der progressiven Belastung: Tag 1 = 1 Push-Up, Tag 2 = 2 Push-Ups, usw.</p>
+            <p><strong>Unsere Philosophie:</strong> Datenschutz ist kein Feature – es ist unser Standard. Daily Pushupp ist so konzipiert, dass Ihre Daten ausschließlich auf Ihrem Gerät verbleiben. Wir glauben an maximale Transparenz und minimale Datenerfassung.</p>
         </section>
 
-        <section>
-            <h2>📱 Welche Daten werden erfasst?</h2>
-            <p><strong>Gar keine.</strong> Ernsthaft. Daily Pushupp speichert alle Daten lokal auf Deinem Gerät:</p>
+        <section id="verantwortlicher">
+            <h2>2. Verantwortlicher</h2>
+            <p><strong>Entwickler:</strong> Phil B.</p>
+            <p><strong>Kontakt:</strong> Für datenschutzrelevante Anfragen nutzen Sie bitte die im App Store bzw. Google Play Store hinterlegten Kontaktmöglichkeiten oder kontaktieren Sie uns über unsere GitHub-Projektseite.</p>
+            <p>Da es sich um eine private Hobby-Entwicklung handelt, wird kein gewerblicher Support angeboten.</p>
+        </section>
+
+        <section id="datenerfassung">
+            <h2>3. Welche Daten werden erfasst?</h2>
+            
+            <h3>3.1 Lokale Daten (auf Ihrem Gerät)</h3>
+            <p>Die App speichert Daten ausschließlich lokal auf Ihrem Gerät im Browser-Speicher (localStorage). Diese Daten werden <strong>niemals</strong> an einen Server, eine Cloud oder einen Dritten übertragen.</p>
+            
+            <table>
+                <tr>
+                    <th>Datenart</th>
+                    <th>Speicherung</th>
+                    <th>Optional</th>
+                </tr>
+                <tr>
+                    <td>Benutzername</td>
+                    <td>Lokal (Verschlüsselt)</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Passwort</td>
+                    <td>Lokal (SHA-256 Hash)</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Trainingstage</td>
+                    <td>Lokal</td>
+                    <td>Nein</td>
+                </tr>
+                <tr>
+                    <td>Streak-Zähler</td>
+                    <td>Lokal</td>
+                    <td>Nein</td>
+                </tr>
+                <tr>
+                    <td>Trainingshistorie</td>
+                    <td>Lokal</td>
+                    <td>Nein</td>
+                </tr>
+                <tr>
+                    <td>Fortschrittsfotos</td>
+                    <td>Lokal (Base64)</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Körperstatistiken</td>
+                    <td>Lokal</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>AI-Coach Auswahl</td>
+                    <td>Lokal</td>
+                    <td>Ja</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <p><strong>Wichtig:</strong> Wenn Sie die App deinstallieren oder die Browserdaten löschen, gehen alle Ihre Daten unwiderruflich verloren. Ein Backup oder Export ist innerhalb der App nicht möglich, da keine Cloud-Verbindung besteht.</p>
+            </div>
+
+            <h3>3.2 Keine Erfassung bei Nutzung</h3>
+            <p>Bei der Nutzung der App werden <strong>keine</strong> folgenden Daten erfasst:</p>
             <ul>
-                <li>Dein Benutzername (lokal im Browser)</li>
-                <li>Dein Passwort (lokal verschlüsselt)</li>
-                <li>De Trainingsstatistiken (Streak, Tage, Wiederholungen)</li>
-                <li>Deine Fotos (falls Du welche hochlädst – bleiben nur auf Deinem Gerät)</li>
+                <li>Standortdaten (GPS)</li>
+                <li>Geräteinformationen</li>
+                <li>IP-Adressen</li>
+                <li>Nutzungsanalysen</li>
+                <li>Fehlerberichte</li>
+                <li>Crash-Reports</li>
             </ul>
+        </section>
+
+        <section id="zweck">
+            <h2>4. Zweck der Datenverarbeitung</h2>
+            <p>Die lokal gespeicherten Daten werden ausschließlich für folgende Zwecke verwendet:</p>
+            <ul>
+                <li><strong>Authentifizierung:</strong> Sicherstellung, dass nur Sie Zugriff auf Ihre Trainingsdaten haben</li>
+                <li><strong>Trainingstracking:</strong> Erfassung und Anzeige Ihrer täglichen Trainingseinheiten und Fortschritte</li>
+                <li><strong>Streak-Berechnung:</strong> Berechnung Ihrer aktuellen Trainingsserie</li>
+                <li><strong>Fortschrittsvisualisierung:</strong> Darstellung Ihres Trainingsverlaufs in Diagrammen</li>
+                <li><strong>Personalisierung:</strong> Auswahl und Anzeige Ihres bevorzugten AI-Coaches</li>
+            </ul>
+            <p>Eine Verarbeitung Ihrer Daten für andere Zwecke, insbesondere Werbung, Profiling oder Datenverkauf, findet <strong>nicht statt</strong>.</p>
+        </section>
+
+        <section id="speicherung">
+            <h2>5. Speicherung und Sicherheit</h2>
+            
+            <h3>5.1 Lokale Speicherung</h3>
+            <p>Alle Daten werden ausschließlich im lokalen Browser-Speicher (localStorage) Ihres Geräts gespeichert. Dies bedeutet:</p>
+            <ul>
+                <li>Keine Datenübertragung an externe Server</li>
+                <li>Keine Cloud-Speicherung</li>
+                <li>Keine Datensicherung durch uns möglich</li>
+                <li>App funktioniert vollständig offline</li>
+            </ul>
+
+            <h3>5.2 Sicherheitsmaßnahmen</h3>
+            <p>Wir setzen folgende Sicherheitsmaßnahmen um:</p>
+            <ul>
+                <li><strong>Passwort-Hashing:</strong> Passwörter werden lokal mit SHA-256 gehasht, bevor sie gespeichert werden</li>
+                <li><strong>Lokale Verschlüsselung:</strong> Daten werden im localStorage abgelegt</li>
+                <li><strong>Keine Übertragung:</strong> Da keine Daten übertragen werden, entfällt das Risiko von Abfangangriffen</li>
+            </ul>
+
+            <h3>5.3 Datenlöschung</h3>
+            <p>Die Löschung Ihrer Daten erfolgt:</p>
+            <ul>
+                <li><strong>Durch Sie:</strong> Löschen Sie die App oder die Browserdaten, werden alle Daten entfernt</li>
+                <li><strong>Automatisch:</strong> Bei Deinstallation der App werden keine Daten mehr verarbeitet</li>
+                <li><strong>Keine Aufbewahrungspflicht:</strong> Wir speichern keine Daten, daher besteht keine Aufbewahrungspflicht</li>
+            </ul>
+        </section>
+
+        <section id="weitergabe">
+            <h2>6. Weitergabe an Dritte</h2>
             <div class="highlight-box">
-                <p><strong>Keine Cookies.</strong> Keine Tracking-Pixel. Keine Analytics. Keine Drittanbieter-Dienste.</p>
+                <p><strong>Es werden keine Daten an Dritte weitergegeben.</strong></p>
+            </div>
+            <p>Wir arbeiten nicht mit:</p>
+            <ul>
+                <li>Werbenetzwerken</li>
+                <li>Analysedienstleistern</li>
+                <li>Social-Media-Plattformen</li>
+                <li>Cloud-Diensten</li>
+                <li>Affiliate-Partnern</li>
+            </ul>
+            <p>Da alle Daten ausschließlich lokal gespeichert werden, ist eine Weitergabe technisch nicht möglich.</p>
+        </section>
+
+        <section id="cookies">
+            <h2>7. Cookies und Tracking</h2>
+            <div class="highlight-box">
+                <p><strong>Es werden keine Cookies verwendet.</strong></p>
+            </div>
+            <p>Die App setzt keine:</p>
+            <ul>
+                <li>Cookies</li>
+                <li>Tracking-Pixel</li>
+                <li>Web Beacons</li>
+                <li>Fingerprinting-Technologien</li>
+                <li>Analytics-Tools</li>
+            </ul>
+        </section>
+
+        <section id="rechte">
+            <h2>8. Ihre Rechte</h2>
+            <p>Als Nutzer haben Sie folgende Rechte bezüglich Ihrer Daten:</p>
+            
+            <h3>8.1 Auskunftsrecht</h3>
+            <p>Sie können jederzeit Auskunft über die bei uns gespeicherten Daten verlangen. Da alle Daten lokal auf Ihrem Gerät gespeichert sind, können Sie diese direkt in der App einsehen.</p>
+
+            <h3>8.2 Recht auf Löschung</h3>
+            <p>Sie können Ihre Daten jederzeit löschen durch:</p>
+            <ul>
+                <li>Deinstallation der App</li>
+                <li>Löschen der Browserdaten</li>
+                <li>Nutzen der Löschfunktion innerhalb der App (für Fotos)</li>
+            </ul>
+
+            <h3>8.3 Recht auf Datenübertragbarkeit</h3>
+            <p>Ein Export Ihrer Daten ist innerhalb der App derzeit <strong>nicht möglich</strong>, da keine Cloud-Verbindung besteht und alle Daten lokal gespeichert werden. Wir arbeiten an einer Export-Funktion für zukünftige Versionen.</p>
+
+            <h3>8.4 Widerspruchsrecht</h3>
+            <p>Da keine personenbezogenen Daten verarbeitet werden, besteht kein Widerspruchsrecht gegen eine bestimmte Verarbeitung.</p>
+
+            <div class="warning-box">
+                <p><strong>Hinweis:</strong> Um Ihre Rechte auszuüben, kontaktieren Sie uns bitte über die im App Store hinterlegten Kontaktdaten. Da wir jedoch keine Ihrer Daten speichern, können wir in den meisten Fällen keine personenbezogenen Daten bereitstellen oder löschen.</p>
             </div>
         </section>
 
-        <section>
-            <h2>☁️ Werden Daten in die Cloud geladen?</h2>
-            <p><strong>Nein.</strong> Alle Daten bleiben in Deinem Browser (localStorage). Die App funktioniert sogar offline.</p>
-            <p>Wenn Du die App auf einem anderen Gerät nutzen möchtest, gibt es keinen einfachen Weg – weil wir eben <em>keine</em> Daten von Dir in der Cloud speichern.</p>
-        </section>
-
-        <section>
-            <h2>📸 Was ist mit Fotos?</h2>
-            <p>Wenn Du Fortschrittsfotos hochlädst, werden diese:</p>
+        <section id="kinder">
+            <h2>9. Kinder und Jugendliche</h2>
+            <p>Die App richtet sich an alle Altersgruppen. Eine Nutzung durch Minderjährige ist zulässig, sofern die Erziehungsberechtigten zustimmen.</p>
+            <p><strong>Besondere Hinweise für Eltern:</strong></p>
             <ul>
-                <li>Nur in Deinem lokalen Browser gespeichert</li>
-                <li>Nur von Dir gesehen und gelöscht</li>
-                <li><strong>Niemals</strong> an einen Server übertragen</li>
+                <li>Die App sammelt keine persönlichen Daten von Kindern</li>
+                <li>Es gibt keine In-App-Käufe</li>
+                <li>Es gibt keine Werbung</li>
+                <li>Keine Verlinkung zu sozialen Netzwerken</li>
+                <li>Keine Chat- oder Kommunikationsfunktionen</li>
             </ul>
+            <p>Eltern können die Nutzung der App bedenkenlos überwachen, indem sie die auf dem Gerät gespeicherten Daten einsehen.</p>
         </section>
 
-        <section>
-            <h2>🔒 Wie sicher sind meine Daten?</h2>
-            <p>Dein Passwort wird lokal gehasht (SHA-256). Die Daten auf Deinem Gerät sind so sicher wie Dein Gerät selbst.</p>
-            <p>Wir können Deine Daten nicht lesen, nicht exportieren, nicht löschen (außer Du löschst sie selbst im Browser).</p>
+        <section id="aenderung">
+            <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+            <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren, insbesondere bei:</p>
+            <ul>
+                <li>Änderungen der App-Funktionalitäten</li>
+                <li>Neuerungen in rechtlichen Anforderungen</li>
+                <li>Änderungen der Datenschutzgesetze</li>
+            </ul>
+            <p>Die jeweils aktuelle Version finden Sie immer auf unserer Website oder im App Store. Wesentliche Änderungen werden durch eine Aktualisierung des "Stand"-Datums kenntlich gemacht.</p>
         </section>
 
-        <section>
-            <h2>📩 Kontakt</h2>
-            <p>Fragen zum Datenschutz? Kein Problem.</p>
-            <p>Da wir kein Unternehmen führen und keine Server betreiben, gibt es kein offizielles Impressum – aber Du kannst uns erreiten, falls Du Fragen hast.</p>
+        <section id="kontakt">
+            <h2>11. Kontakt</h2>
+            <p>Bei Fragen zu dieser Datenschutzerklärung oder allgemeinen Anfragen zum Datenschutz kontaktieren Sie uns bitte:</p>
+            <ul>
+                <li>Über die im jeweiligen App Store (Google Play / Apple App Store) hinterlegten Kontaktmöglichkeiten</li>
+                <li>Per GitHub Issue: <a href="https://github.com/philbuerli/pushup-tracker">github.com/philbuerli/pushup-tracker</a></li>
+            </ul>
+            <p>Wir werden Ihre Anfrage so schnell wie möglich beantworten.</p>
         </section>
 
         <section>
             <h2>📋 Zusammenfassung</h2>
-            <div class="highlight-box">
-                <p><span class="emoji">✅</span> Keine Server<br>
-                <span class="emoji">✅</span> Keine Cloud<br>
-                <span class="emoji">✅</span> Keine Registrierung<br>
-                <span class="emoji">✅</span> Keine Cookies<br>
-                <span class="emoji">✅</span> Kein Tracking<br>
-                <span class="emoji">✅</span> 100% lokal</p>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Keine Server</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Keine Cloud</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Keine Registrierung</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Keine Cookies</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Kein Tracking</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Keine Werbung</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>100% lokal</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="icon">✓</span>
+                    <span>Offline fähig</span>
+                </div>
             </div>
-            <p>Daily Pushupp ist Probably die datenschutzfreundlichste Fitness-App, die es gibt. ☺️</p>
         </section>
 
         <footer>
-            <p>Made with 🔥 for simple fitness tracking</p>
+            <p>© 2026 Daily Pushupp. Alle Rechte vorbehalten.</p>
+            <p>Made with 💪 for simple fitness tracking</p>
             <p><a href="https://github.com/philbuerli/pushup-tracker">Zur App</a></p>
         </footer>
     </div>
