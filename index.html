@@ -254,7 +254,16 @@
         <section id="datenerfassung">
             <h2>3. Welche Daten werden erfasst?</h2>
             
-            <h3>3.1 Lokale Daten (auf Ihrem Gerät)</h3>
+            <h3>3.1 Registrierung und Anmeldung</h3>
+            <p>Die App bietet eine optionale Registrierung mit Benutzername und Passwort. Diese dient der <strong>lokalen</strong> Datenisolierung – jeder Benutzer hat seine eigenen, getrennten Daten auf demselben Gerät.</p>
+            <ul>
+                <li><strong>Benutzername:</strong> Wird lokal gespeichert, um Ihr Profil zu identifizieren</li>
+                <li><strong>Passwort:</strong> Wird lokal gespeichert (für lokale Authentifizierung)</li>
+                <li><strong>Keine E-Mail erforderlich</strong></li>
+                <li><strong>Keine Verifizierung</strong></li>
+            </ul>
+
+            <h3>3.2 Lokale Daten (auf Ihrem Gerät)</h3>
             <p>Die App speichert Daten ausschließlich lokal auf Ihrem Gerät im Browser-Speicher (localStorage). Diese Daten werden <strong>niemals</strong> an einen Server, eine Cloud oder einen Dritten übertragen.</p>
             
             <table>
@@ -265,16 +274,16 @@
                 </tr>
                 <tr>
                     <td>Benutzername</td>
-                    <td>Lokal (Verschlüsselt)</td>
+                    <td>Lokal</td>
                     <td>Ja</td>
                 </tr>
                 <tr>
                     <td>Passwort</td>
-                    <td>Lokal (SHA-256 Hash)</td>
+                    <td>Lokal</td>
                     <td>Ja</td>
                 </tr>
                 <tr>
-                    <td>Trainingstage</td>
+                    <td>Trainingstag (aktueller)</td>
                     <td>Lokal</td>
                     <td>Nein</td>
                 </tr>
@@ -303,13 +312,27 @@
                     <td>Lokal</td>
                     <td>Ja</td>
                 </tr>
+                <tr>
+                    <td>Freundesliste</td>
+                    <td>Lokal</td>
+                    <td>Ja</td>
+                </tr>
             </table>
 
             <div class="warning-box">
                 <p><strong>Wichtig:</strong> Wenn Sie die App deinstallieren oder die Browserdaten löschen, gehen alle Ihre Daten unwiderruflich verloren. Ein Backup oder Export ist innerhalb der App nicht möglich, da keine Cloud-Verbindung besteht.</p>
             </div>
 
-            <h3>3.2 Keine Erfassung bei Nutzung</h3>
+            <h3>3.3 In-App Nachrichten</h3>
+            <p>Die App zeigt <strong>in-app</strong> Nachrichten (sogenannte "Toast"-Meldungen) an, z.B.:</p>
+            <ul>
+                <li>Bestätigung nach abgeschlossenem Training</li>
+                <li>Motivationale Sprüche vom gewählten AI-Coach</li>
+                <li>Streak-Informationen</li>
+            </ul>
+            <p><strong>Keine Push-Benachrichtigungen:</strong> Die App versendet <strong>keine</strong> Push-Benachrichtigungen an Ihr Gerät. Alle Nachrichten erscheinen nur, während Sie die App aktiv nutzen.</p>
+
+            <h3>3.4 Keine Erfassung bei Nutzung</h3>
             <p>Bei der Nutzung der App werden <strong>keine</strong> folgenden Daten erfasst:</p>
             <ul>
                 <li>Standortdaten (GPS)</li>
@@ -318,6 +341,7 @@
                 <li>Nutzungsanalysen</li>
                 <li>Fehlerberichte</li>
                 <li>Crash-Reports</li>
+                <li>Push-Benachrichtigungen</li>
             </ul>
         </section>
 
